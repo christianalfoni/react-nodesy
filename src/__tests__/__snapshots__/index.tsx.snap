@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="folder"
+>
+  <div
+    className="name"
+  >
+    whatup
+  </div>
+  <div
+    className="folder-files"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`renders correctly with different state 1`] = `
+<div
+  className="folder"
+>
+  <div
+    className="name"
+  >
+    whatup
+  </div>
+  <div
+    className="folder-files"
+    onClick={[Function]}
+  >
+    <div
+      className="file"
+    >
+      someName
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with factory 1`] = `
+<div
+  className="folder"
+>
+  <div
+    className="name"
+  >
+    whatup
+  </div>
+  <div
+    className="folder-files"
+    onClick={[Function]}
+  >
+    <div
+      className="file"
+    >
+      someName
+    </div>
+  </div>
+</div>
+`;
