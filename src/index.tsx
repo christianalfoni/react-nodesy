@@ -31,7 +31,7 @@ function renderChildren(parent, types, setNodeState, depth) {
   }
 
   return parent.children.map((child) => {
-    return types[child.type]({
+    return React.createElement(types[child.type], {
       key: child.data.id,
       setNodeState: setNodeState.bind(null, child.data.id),
       data: child.data,

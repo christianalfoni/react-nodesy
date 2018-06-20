@@ -15,9 +15,9 @@
 import React from 'react'
 import Nodesy from 'react-nodesy'
 
-const Folder = ({ key, data, state, setNodeState, children }) => {
+const Folder = ({ data, state, setNodeState, children }) => {
   return (
-    <div className="folder" key={key}>
+    <div className="folder">
       <div className="name">{data.name}</div>
       <div
         className="folder-files"
@@ -29,9 +29,9 @@ const Folder = ({ key, data, state, setNodeState, children }) => {
   )
 }
 
-const File = ({ key, data }) => {
+const File = ({ data }) => {
   return (
-    <div className="file" key={key}>
+    <div className="file">
       {data.name}
     </div>
   )
@@ -74,10 +74,9 @@ export default Hierarchy
 
 The following properties are passed to each node:
 
-- **key**: They key to be used with the root element
-- **setNodeState**: Callback to change the state of the node
 - **data**: The data related to the node
 - **state**: The state related to the node
+- **setNodeState**: Callback to change the state of the node
 - **children**: The child nodes of the node, think of it as component props
 - **parent**: The parent node,
 - **depth**: The depth of the node (0, 1, 2 etc.). Typically used for indenting
@@ -102,9 +101,9 @@ type TreeHierarchy = HierarchyData<NodeData, NodeState>
 
 const Nodesy = factory<NodeData, NodeState>()
 
-const Folder: React.SFC<TreeNodeProps> = ({ key, data, state, setNodeState, children }) => {
+const Folder: React.SFC<TreeNodeProps> = ({ data, state, setNodeState, children }) => {
   return (
-    <div className="folder" key={key}>
+    <div className="folder">
       <div className="name">{data.name}</div>
       <div
         className="folder-files"
@@ -116,9 +115,9 @@ const Folder: React.SFC<TreeNodeProps> = ({ key, data, state, setNodeState, chil
   )
 }
 
-const File: React.SFC<TreeNodeProps> = ({ key, data }) => {
+const File: React.SFC<TreeNodeProps> = ({ data }) => {
   return (
-    <div className="file" key={key}>
+    <div className="file">
       {data.name}
     </div>
   )
