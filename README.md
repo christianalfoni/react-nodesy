@@ -11,6 +11,8 @@
 
 ## Render a hierarchy of nodes
 
+Look at demo here: [Codesandbox](https://codesandbox.io/s/2zxq8k3xon)
+
 ```js
 import React from 'react'
 import Nodesy from 'react-nodesy'
