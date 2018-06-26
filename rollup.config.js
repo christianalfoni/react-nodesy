@@ -9,21 +9,15 @@ import pascalCase from 'pascal-case';
 const pkg = require('./package');
 
 export default {
-  moduleName: pascalCase(pkg.name),
-  amd: {
-    id: pkg.name,
-  },
-  entry: 'es/index.js',
-  dest: 'dist/bundle.js',
-  format: 'umd',
-  exports: 'named',
-  sourceMap: true,
-  plugins: [
-    sourcemaps(),
-    nodeResolve(),
-    nodeGlobals(),
-    nodeBuiltins(),
-    commonjs(),
-    uglify()
-  ]
+	moduleName: pascalCase(pkg.name),
+	amd: {
+		id: pkg.name
+	},
+	entry: 'es/index.js',
+	external: [ 'react', 'react-dom' ],
+	dest: 'dist/bundle.js',
+	format: 'umd',
+	exports: 'named',
+	sourceMap: true,
+	plugins: [ sourcemaps(), nodeResolve(), nodeGlobals(), nodeBuiltins(), commonjs(), uglify() ]
 };

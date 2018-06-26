@@ -1,6 +1,6 @@
 {
 	"name": "react-nodesy",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "React node hierarchy with render props",
 	"author": "Christian Alfoni <christianalfoni@gmail.com>",
 	"license": "MIT",
