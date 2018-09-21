@@ -50,7 +50,7 @@ function updateHierarchy(data, id, state) {
 	return data.reduce((children, node) => {
 		return children.concat({
 			...node,
-			state: node.data.id === id ? Object.assign(node.state || {}, state) : node.state,
+			state: node.data.id === id ? Object.assign({}, node.state, state) : node.state,
 			children: updateHierarchy(node.children || [], id, state)
 		});
 	}, []);
